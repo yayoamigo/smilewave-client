@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
     postUser: JSON.parse(localStorage.getItem("postUser")) || [],
@@ -7,12 +8,9 @@ const initialState = {
 
 export const fetchPostUser = createAsyncThunk('fetchPostUser', async (username) => {
     try {
-      const response = await fetch(`/posts/profile/${username}`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-  
-      const data = await response.json();
+      const response = await axios.get(`https://52.87.212.123:8000/api/posts/profile/${username}`);
+      
+      const data =  response.data
       return data;
     } catch (error) {
       console.error(error);

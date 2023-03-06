@@ -8,7 +8,7 @@ const initialState = {
 
 export const fetchFriends = createAsyncThunk("fetchFriends", async (userId) => {
     try {
-      const response = await axios.get(`http://52.87.212.123:8000/api/users/friends/${userId}`);
+      const response = await axios.get(`https://52.87.212.123:8000/api/users/friends/${userId}`);
   
       return response.data;
     } catch (error) {

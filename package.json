@@ -55,7 +55,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://52.87.212.123:8000/api",
+  "proxy": "https://52.87.212.123:8000/api",
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }

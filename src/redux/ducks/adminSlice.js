@@ -8,7 +8,7 @@ const initialState = {
 
 export const fetchAdmin = createAsyncThunk('fetchAdmin', async (userId) => {
   try {
-    const response = await axios.get(`http://52.87.212.123:8000/api/users?userId=${userId}`);
+    const response = await axios.get(`https://52.87.212.123:8000/api/users?userId=${userId}`);
     return response.data;
   } catch (error) {
     console.error(error);

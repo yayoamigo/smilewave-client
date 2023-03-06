@@ -9,7 +9,7 @@ const initialState = {
 
 export const login = createAsyncThunk("api/auth/login", async (userCredential) => {
   try{
-    const response = await axios.post("http://52.87.212.123:8000/api/auth/login", userCredential);
+    const response = await axios.post("https://52.87.212.123:8000/api/auth/login", userCredential);
     const data = response.data;
   return data;
   }catch (error) {

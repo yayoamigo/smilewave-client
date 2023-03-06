@@ -7,7 +7,7 @@ const initialState = {
 
 export const fetchPostUser = createAsyncThunk('fetchPostUser', async (username) => {
     try {
-      const response = await fetch(`/api/posts/profile/${username}`);
+      const response = await fetch(`/posts/profile/${username}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

@@ -74,6 +74,7 @@ export default function Share() {
       <motion.div className="shareWrapper" variants={imgVariants}>
         <div className="shareTop">
           <img
+            crossorigin="anonymous"
             className="shareProfileImg"
             src={user.profilePicture ? PF + user.profilePicture : PF + "self.png"}
             alt=""
@@ -87,7 +88,7 @@ export default function Share() {
         <hr className="shareHr" />
         {file && (
           <div className="shareImgContainer">
-            <img className="shareImg" src={URL.createObjectURL(file)} alt="" />
+            <img crossorigin="anonymous" className="shareImg" src={URL.createObjectURL(file)} alt="" />
             <Cancel className="shareCancelImg" onClick={handleCancelFile} />
           </div>
         )}

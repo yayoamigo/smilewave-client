@@ -37,6 +37,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
         <div className="chatOnlineFriend" onClick={() => handleClick(o)}>
           <div className="chatOnlineImgContainer">
             <img
+            crossorigin="anonymous"
               className="chatOnlineImg"
               src={
                 o?.profilePicture

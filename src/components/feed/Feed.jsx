@@ -32,7 +32,6 @@ export default function Feed({username}) {
     } else {
       dispatch(fetchPost(user._id))
     }
-`
     // eslint-disable-next-line
   }, [dispatch]);
 

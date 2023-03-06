@@ -36,7 +36,7 @@ export default function Rightbar({ user }) {
     fetchAdminData();
     
     setFollowed(admin?.followings?.includes(user?._id));
-  }, [dispatch, user]);
+  }, [dispatch, user , admin?.followings]);
   
  
   const handleClick = async () => {

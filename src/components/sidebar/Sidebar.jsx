@@ -22,7 +22,7 @@ export default function Sidebar() {
   const dispatch = useDispatch();
   useEffect(() => {
       dispatch(fetchFriends(user._id));
-  }, [dispatch]);
+  }, [dispatch, user._id]);
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">

@@ -37,7 +37,7 @@ export default function Profile() {
 
   useEffect(() => {
     dispatch(fetchUsers());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => { 
     setIsAdmin(currentUser.username === username)
@@ -48,7 +48,7 @@ export default function Profile() {
       dispatch(fetchPostUser(username));
       
     }
-  }, [userName]);
+  }, [userName, dispatch]);
 
   const submitHandler = async (e) => {
     e.preventDefault();

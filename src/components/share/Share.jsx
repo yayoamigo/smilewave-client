@@ -21,7 +21,7 @@ export default function Share() {
       await dispatch(fetchAdmin(currentUser._id));
     }
     fetchAdminData();
-  }, [dispatch]);
+  }, [dispatch, currentUser._id]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },

@@ -32,7 +32,7 @@ export default function Feed({username}) {
     } else {
       dispatch(fetchPost(user._id))
     }
-  }, []);
+  }, [dispatch, username, user._id]);
 
   useEffect(() => {
     localStorage.setItem('postUser', JSON.stringify(postUser));
@@ -40,7 +40,7 @@ export default function Feed({username}) {
 
   useEffect(() => {
     dispatch(fetchAdmin(user._id));
-  }, [user]);
+  }, [user, dispatch]);
 
   return (
     <div className="feed">

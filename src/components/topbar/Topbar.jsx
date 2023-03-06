@@ -20,8 +20,10 @@ export default function Topbar() {
       await dispatch(fetchAdmin(currentUser._id));
     }
     fetchAdminData();
+
     // eslint-disable-next-line
   }, [dispatch]);
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">

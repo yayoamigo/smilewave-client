@@ -37,8 +37,10 @@ export default function Profile() {
 
   useEffect(() => {
     dispatch(fetchUsers());
+
     // eslint-disable-next-line
   }, []);
+
 
   useEffect(() => { 
     setIsAdmin(currentUser.username === username)
@@ -49,8 +51,10 @@ export default function Profile() {
       dispatch(fetchPostUser(username));
       
     }
+
      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userName]);
+
 
   const submitHandler = async (e) => {
     e.preventDefault();

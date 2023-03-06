@@ -22,8 +22,10 @@ export default function Sidebar() {
   const dispatch = useDispatch();
   useEffect(() => {
       dispatch(fetchFriends(user._id));
+
       // eslint-disable-next-line
   }, [dispatch]);
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">

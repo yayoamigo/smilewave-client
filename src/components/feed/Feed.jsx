@@ -32,7 +32,8 @@ export default function Feed({username}) {
     } else {
       dispatch(fetchPost(user._id))
     }
-  }, []);
+    // eslint-disable-next-line
+  }, [dispatch]);
 
   useEffect(() => {
     localStorage.setItem('postUser', JSON.stringify(postUser));
@@ -40,6 +41,7 @@ export default function Feed({username}) {
 
   useEffect(() => {
     dispatch(fetchAdmin(user._id));
+    // eslint-disable-next-line
   }, [user]);
 
   return (

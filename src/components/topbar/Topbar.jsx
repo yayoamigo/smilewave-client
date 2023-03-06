@@ -1,5 +1,5 @@
 import "./Topbar.css";
-import { Search, Person, Chat, Notifications } from "@mui/icons-material";
+import { Search,  Chat } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { fetchAdmin } from "../../redux/ducks/adminSlice";
@@ -20,7 +20,7 @@ export default function Topbar() {
       await dispatch(fetchAdmin(currentUser._id));
     }
     fetchAdminData();
-    
+    // eslint-disable-next-line
   }, [dispatch]);
   return (
     <div className="topbarContainer">

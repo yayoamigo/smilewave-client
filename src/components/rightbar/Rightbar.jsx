@@ -36,6 +36,7 @@ export default function Rightbar({ user }) {
     fetchAdminData();
     
     setFollowed(admin?.followings?.includes(user?._id));
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, user]);
   
  

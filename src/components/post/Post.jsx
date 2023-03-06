@@ -17,6 +17,7 @@ export default function Post({ post }) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchUsers());
+    // eslint-disable-next-line
   }, []);
 
   const PF = process.env.REACT_APP_PUBLIC_FOLDER

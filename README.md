@@ -68,7 +68,7 @@ Tech Stack <a name="tech-stack"></a>
 - **Npm install from the root folder**
 - **Npm run deploy from the root**
 - **Use the public image for the server with Docker run -it -p 8000:8000 yayoamigo/smilehttps2**
--**Server deployed on AWS 52.87.212.123
+- **Server deployed on AWS 52.87.212.123**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -84,8 +84,8 @@ export default function Profile() {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img className="profileCoverImg" src={user.coverPicture ? PF + user.coverPicture : PF + "post3.jpg"} alt="" />
-              <img className="profileUserImg" src={user.profilePicture ? PF + user.profilePicture : PF + "self.png"} alt="" />
+              <img crossorigin="anonymous" className="profileCoverImg" src={user.coverPicture ? PF + user.coverPicture : PF + "post3.jpg"} alt="" />
+              <img crossorigin="anonymous" className="profileUserImg" src={user.profilePicture ? PF + user.profilePicture : PF + "self.png"} alt="" />
             </div>
             <div className="profileInfo">  
                 {isAdmin ? (
@@ -93,7 +93,7 @@ export default function Profile() {
             <>
               {file && (
                 <div className="shareImgContainer">
-                  <img className="shareImg" src={URL.createObjectURL(file)} alt="" />
+                  <img crossorigin="anonymous" className="shareImg" src={URL.createObjectURL(file)} alt="" />
                   <Cancel className="shareCancelImg" onClick={handleCancelFile} />
                 </div>
               )}

@@ -11,6 +11,7 @@ export default function Message({ message, own, sender }) {
     <div className={own ? "message own" : "message"}>
       <div className="messageTop">
         <img
+        crossorigin="anonymous"
           className="messageImg"
           src={ user?.profilePicture ? PF + user.profilePicture : PF + "person/noAvatar.png"}
           alt=""

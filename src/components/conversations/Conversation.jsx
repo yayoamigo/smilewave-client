@@ -23,6 +23,7 @@ export default function Conversation({ conversation, currentUser }) {
   return (
     <div className="conversation">
       <img
+      crossorigin="anonymous"
         className="conversationImg"
         src={
           user?.profilePicture

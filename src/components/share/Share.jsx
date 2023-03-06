@@ -21,7 +21,10 @@ export default function Share() {
       await dispatch(fetchAdmin(currentUser._id));
     }
     fetchAdminData();
-  }, [dispatch, currentUser._id]);
+
+    // eslint-disable-next-line
+  }, [dispatch]);
+
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },

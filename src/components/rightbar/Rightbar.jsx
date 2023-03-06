@@ -43,12 +43,12 @@ export default function Rightbar({ user }) {
   const handleClick = async () => {
     try {
       if (followed) {
-        await axios.put(`http://52.87.212.123:8000/api/users/${user._id}/unfollow`, {
+        await axios.put(`https://52.87.212.123:8000/api/users/${user._id}/unfollow`, {
           userId: currentUser._id,
         });
         
       } else {
-        await axios.put(`http://52.87.212.123:8000/api/users/${user._id}/follow`, {
+        await axios.put(`https://52.87.212.123:8000/api/users/${user._id}/follow`, {
           userId: currentUser._id,
         });
         

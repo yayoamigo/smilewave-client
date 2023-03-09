@@ -21,7 +21,7 @@ export default function Rightbar({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const [followed, setFollowed] = useState(false);
   const filteredUsers = Object.values(users).filter(
-    (u) => !friends[currentUser._id]?.find((f) => f._id === u._id)
+    (u) => u._id !== currentUser._id && !friends[currentUser._id]?.find((f) => f._id === u._id)
   );
 
   
@@ -63,12 +63,12 @@ export default function Rightbar({ user }) {
     return (
       <>
         <div className="birthdayContainer">
-          <img crossorigin="anonymous" className="birthdayImg" src={`${PF}gift.png`} alt="" />
+          <img crossOrigin="anonymous" className="birthdayImg" src={`${PF}gift.png`} alt="" />
           <span className="birthdayText">
             <b>Eros smanis</b> and <b>3 other friends</b> have a birhday today.
           </span>
         </div>
-        <img crossorigin="anonymous" className="rightbarAd" src={`${PF}kfc.jpg`} alt="" />
+        <img crossOrigin="anonymous" className="rightbarAd" src={`${PF}kfc.jpg`} alt="" />
         <h4 className="rightbarTitle">meet new people</h4>
         <ul className="rightbarFriendList">
           {filteredUsers?.map((u) => (
@@ -146,7 +146,7 @@ export default function Rightbar({ user }) {
                 variants={listItemVariants}
               >
                 <motion.img
-                crossorigin="anonymous"
+                crossOrigin="anonymous"
                   src={friend.profilePicture ? PF + friend.profilePicture : PF + 'self.png'}
                   alt=""
                   className="rightbarFollowingImg"

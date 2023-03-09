@@ -28,7 +28,7 @@ export default function Post({ post }) {
 
   const likeHandler = () => {
     try {
-      axios.put("api/posts/" + post._id + "/like", { userId: userlog._id });
+      axios.put("/posts/" + post._id + "/like", { userId: userlog._id });
     } catch (err) {}
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
@@ -46,7 +46,7 @@ export default function Post({ post }) {
           <div className="postTopLeft">
             <Link to={`profile/${user[post.userId]?.username}`}>
               <motion.img
-              crossorigin="anonymous"
+              crossOrigin="anonymous"
                 className="postProfileImg"
                 src={user[post.userId]?.profilePicture ? PF + user[post.userId]?.profilePicture : PF + "self.png"}
                 alt=""
@@ -86,7 +86,7 @@ export default function Post({ post }) {
             {post?.desc}
           </motion.span>
           <motion.img
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
             className="postImg"
             src={PF+post.img}
             alt=""
@@ -98,7 +98,7 @@ export default function Post({ post }) {
         <div className="postBottom">
           <div className="postBottomLeft">
             <motion.img
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
               className="likeIcon"
               src={`${PF}like.png`}
               onClick={likeHandler}
@@ -108,7 +108,7 @@ export default function Post({ post }) {
               transition={{ delay: 0.3, duration: 0.4 }}
             />
             <motion.img
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
               className="likeIcon"
               src={`${PF}heart.png`}
               onClick={likeHandler}

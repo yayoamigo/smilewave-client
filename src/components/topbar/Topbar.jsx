@@ -62,7 +62,7 @@ export default function Topbar() {
         </div>
         <Link to={`/profile/${user?.username}`}>
           <img
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
             src={
               user.profilePicture
                 ? PF + user.profilePicture

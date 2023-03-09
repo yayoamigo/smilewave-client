@@ -32,7 +32,7 @@ export default function Online({ user}) {
       <div className="rightbarProfileImgContainer">
         <Link to={`/profile/${user.username}`}>
           <motion.img
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
             className="rightbarProfileImg"
             src={user.profilePicture ? PF + user.profilePicture : PF + "self.png"}
             alt=""

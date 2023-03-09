@@ -50,11 +50,11 @@ export default function Share() {
       newPost.img = fileName;
       console.log(newPost);
       try {
-        await axios.post("api/upload", data);
+        await axios.post("/upload", data);
       } catch (err) {}
     }
     try {
-      await axios.post("api/posts", newPost);
+      await axios.post("/posts", newPost);
       window.location.reload();
     } catch (err) {}
   };
@@ -77,7 +77,7 @@ export default function Share() {
       <motion.div className="shareWrapper" variants={imgVariants}>
         <div className="shareTop">
           <img
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
             className="shareProfileImg"
             src={user.profilePicture ? PF + user.profilePicture : PF + "self.png"}
             alt=""
@@ -91,7 +91,7 @@ export default function Share() {
         <hr className="shareHr" />
         {file && (
           <div className="shareImgContainer">
-            <img crossorigin="anonymous" className="shareImg" src={URL.createObjectURL(file)} alt="" />
+            <img crossOrigin="anonymous" className="shareImg" src={URL.createObjectURL(file)} alt="" />
             <Cancel className="shareCancelImg" onClick={handleCancelFile} />
           </div>
         )}

@@ -64,8 +64,8 @@ export default function Profile() {
       data.append("name", fileName);
       data.append("file", file);
       try {
-        await axios.post("http://52.87.212.123:8000/api/upload", data);
-        const res = await axios.put(`http://52.87.212.123:8000/api/users/${user._id}`, { userId: currentUser._id, profilePicture: fileName });
+        await axios.post("https://52.87.212.123:8000/api/upload", data);
+        const res = await axios.put(`https://52.87.212.123:8000/api/users/${user._id}`, { userId: currentUser._id, profilePicture: fileName });
         console.log(res.data);
         navigate('/');
       } catch (err) {}
@@ -90,8 +90,8 @@ export default function Profile() {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img crossorigin="anonymous" className="profileCoverImg" src={user.coverPicture ? PF + user.coverPicture : PF + "post3.jpg"} alt="" />
-              <img crossorigin="anonymous" className="profileUserImg" src={user.profilePicture ? PF + user.profilePicture : PF + "self.png"} alt="" />
+              <img crossOrigin="anonymous" className="profileCoverImg" src={user.coverPicture ? PF + user.coverPicture : PF + "post3.jpg"} alt="" />
+              <img crossOrigin="anonymous" className="profileUserImg" src={user.profilePicture ? PF + user.profilePicture : PF + "self.png"} alt="" />
             </div>
             <div className="profileInfo">  
                 {isAdmin ? (
@@ -99,7 +99,7 @@ export default function Profile() {
             <>
               {file && (
                 <div className="shareImgContainer">
-                  <img crossorigin="anonymous" className="shareImg" src={URL.createObjectURL(file)} alt="" />
+                  <img crossOrigin="anonymous" className="shareImg" src={URL.createObjectURL(file)} alt="" />
                   <Cancel className="shareCancelImg" onClick={handleCancelFile} />
                 </div>
               )}

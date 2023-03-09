@@ -20,7 +20,7 @@ export const login = createAsyncThunk("api/auth/login", async (userCredential) =
 
 export const register = createAsyncThunk("api/auth/register", async (user) => {
   try {
-     await axios.post("http://52.87.212.123:8000/api/auth/register", user);
+     await axios.post("https://52.87.212.123:8000/api/auth/register", user);
 
   } catch (error) {
     console.error(error);

@@ -53,7 +53,7 @@ Tech Stack <a name="tech-stack"></a>
 
 ## 🚀  live <a name="live-demo"></a>
 
-- [link](https://main--inquisitive-mochi-05d2dc.netlify.app/)
+- [link](https://main--ornate-frangollo-9ffaef.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
